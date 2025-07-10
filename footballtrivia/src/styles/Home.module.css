@@ -1,0 +1,10 @@
+.start-button{
+    display:inline-block;
+    padding: 15px 20px;
+    background-color: tomato;
+    color:white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+}
