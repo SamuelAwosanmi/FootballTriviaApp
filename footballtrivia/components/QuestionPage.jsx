@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { easyQuestions } from "@/questionTypes/easyQuestions"
 import { mediumQuestions } from "@/questionTypes/mediumQuestions";
 import { hardQuestions } from "@/questionTypes/hardQuestion";
+
+
 export default function QuestionPage() {
    
 

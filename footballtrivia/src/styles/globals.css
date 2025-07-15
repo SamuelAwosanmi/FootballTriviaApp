@@ -53,3 +53,9 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.options:hover{
+  color: 'tomato';
+  
+}

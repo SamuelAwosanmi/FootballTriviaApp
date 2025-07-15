@@ -10,15 +10,23 @@ export default function StartButton () {
         style={{
         display: 'inline-block',
         padding: '15px 20px',
-        backgroundColor: 'tomato',
+        //backgroundColor: 'tomato',
         color: 'white',
         textDecoration: 'none',
-        borderRadius: '3px',
-        fontSize: '20px',
+       gap: '50px',
+        borderRadius: '17px',
+        fontSize: '75px',
         fontWeight: 'bold',
-        width: '3000',
+        color: 'gold',
+        textAlign: 'center',
+        justifyContent:"center",
+        placeItems: 'center',
+            backgroundColor: '#1E1E3C',
       }}
-        className="start-button">
+        className="start-button" 
+        
+
+        >
             Start
         </a>
 
