@@ -17,6 +17,8 @@ export default function DifficultySelectorPage() {
   <div style={{
     backgroundColor: '#FFF7ED',
         color: '#1F2937',
+        height: '100vh',
+        width: '100vw',
   }}>
 <div id="Text">
     

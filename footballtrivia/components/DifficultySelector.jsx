@@ -32,7 +32,11 @@ export default function difficultySelector() {
 
     return(
         
-
+<div id="layout-container"
+style={{
+  height: '150vh',
+  width: '150vh',
+}}>
         <div className="difficultydiv" style={{
             display:'flex',
         alignContent: "center",
@@ -112,6 +116,7 @@ onClick={()=> saveLevel('hard') } />
 
 
 
+       </div>
        </div>
     );
 }

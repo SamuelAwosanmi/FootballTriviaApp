@@ -4,12 +4,16 @@ import { mediumQuestions } from "@/questionTypes/mediumQuestions";
 import { hardQuestions } from "@/questionTypes/hardQuestion";
 import Football from "../../../components/football";
 import styles from "../../styles/Question.module.css";
+import ToggleButton from "../../../components/ToggleButton";
+import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 export default function QuestionPage() {
 
  
 
 
+const router = useRouter();
   const [difficultyLevel, setDifficultyLevel] = useState("");
   const [current, setCurrent] = useState(0);
   const [selectiveLevels, setLevel] = useState([]);
@@ -21,7 +25,7 @@ export default function QuestionPage() {
 
 
 
-<Football/>
+
 
   const positiveFeedbackMessages = [
     " Correct! Well done click Next to move on to the next question.",
@@ -87,6 +91,8 @@ export default function QuestionPage() {
 
       }}
     >
+
+      <Football/>
 
        
       
@@ -162,7 +168,7 @@ export default function QuestionPage() {
         }}>Score: {score}</p>
      
      
-     
+     <ToggleButton/>
      
      
        <div id="feedback" style={{
@@ -209,6 +215,8 @@ export default function QuestionPage() {
           Back
         </button>
 
+
+
        
 
         <button
@@ -220,7 +228,8 @@ export default function QuestionPage() {
             setFeedback("");
             setCorrect(false);
             } else {
-                             alert("This is the final question!");
+                     alert("This is the final question!");  
+                   router.push('/endQuizPage');                       
             }
 
 
@@ -239,16 +248,26 @@ export default function QuestionPage() {
             backgroundColor: '#EF4444'
           }}
         >
+
           Next
         </button>
       </div>
-
+        
       
       <div style={{ marginTop: "20px",
         backgroundColor: '#EF4444'
        }}>
         <progress value={((current + 1) / selectiveLevels.length) * 100} max="100" />
       </div>
+   
+   
+  
+   
+
+   
     </div>
-  );
+  
+
+)
 }
+
