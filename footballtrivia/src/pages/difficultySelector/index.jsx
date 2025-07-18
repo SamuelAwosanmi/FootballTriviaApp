@@ -1,6 +1,14 @@
 import DifficultySelector from "../../../components/DifficultySelector";
+import React, { useState, useEffect } from 'react';
 
 export default function DifficultySelectorPage() {
+  
+
+
+ 
+  
+  
+  
   return (
   
    

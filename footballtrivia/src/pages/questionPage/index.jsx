@@ -51,7 +51,7 @@ export default function QuestionPage() {
     setDifficultyLevel(level);
     alert(level);
   }, []);
-
+ 
   useEffect(() => {
     console.log(selectiveLevels, "log");
   }, [selectiveLevels]);
@@ -109,8 +109,10 @@ export default function QuestionPage() {
         }}
       >
         {currentQuestion?.options?.map((option, index) => (
-          <button key={index}
-                 className={styles.questionCard}
+          <button 
+          className={styles.questionCard}
+          key={index}
+                 
 
          
           onClick={() => {

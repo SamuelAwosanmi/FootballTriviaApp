@@ -1,30 +1,44 @@
 
-import {useState} from "react";
+import {useState, useRef} from "react";
+
 
 
 
 export default function ToggleButton () {
-   
-   
-//const [toggled, setToToggled] = useState(false);
+  
+   const audioRef = useRef(null);
+const [isPlaying, setIsPlaying] = useState(false);
 
-
-    function playAnthem () {
-     const audio =  new Audio('/ChampionsLeagueAnthem.mp3')
-    audio.loop = true;
-    audio.play();
+const toggleAnthem = () => {
     
+    if(!audioRef.current){
+        return;
     }
 
+    isPlaying ? audioRef.current.pause() : audioRef.current.play();
+    setIsPlaying(!isPlaying);
+}
+
+
+
+
+
+  
+
+  
+
+   
+
+ return(
+   
+<div>
+
     
-
-
-    return(
-
+      <audio ref={audioRef} src="/ChampionsLeagueAnthem.mp3" loop />
 
        
         <button
-        onClick={playAnthem}
+        onClick={toggleAnthem}
         style={{
             width:'300px',
             height: '50px',
@@ -37,11 +51,14 @@ export default function ToggleButton () {
 
 
 
-
-        }}>Play Anthem</button>
+        }} 
+        
+        > {isPlaying ? "Pause Anthem" : 'Play Anthem'} 
+        </button>
         
 
 
-
+</div>
     );
-};
+}
+    

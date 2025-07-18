@@ -3,7 +3,7 @@ import RandomButton from "./RandomButton";
 export default function difficultySelector() {
  // const [isSpinning, setIsSpinning] = useState(false);
 
- 
+
 
     const centre = 400 ;
     const radius = 300;
@@ -43,7 +43,9 @@ export default function difficultySelector() {
                 
         >
             <svg width='900' height='900'>
-                  <path d={getPath(0,120)} 
+
+                  <path d={getPath(0,120)}
+                  
                 fill="red"
 
 onClick={()=> saveLevel('hard') } /> 
@@ -52,6 +54,7 @@ onClick={()=> saveLevel('hard') } />
                
                 
  
+  <text x="250" y="650" fontSize="32" fill="black" fontWeight="bold">Easy</text>
 
                  <path d={getPath(120,240)} fill="green"
  onClick={()=> saveLevel('easy') } />
@@ -63,50 +66,11 @@ onClick={()=> saveLevel('hard') } />
    
 
 
-                   <text x="550" y="2500" fontSize="24" fill="white">Medium</text>
             </svg>
 
 
  
-      <div
-        style={{
-          position: "absolute",
-          left: "200px",
-          top: "440px",
-          color: "white",
-          fontSize: "44px",
-          fontWeight: "bold",
-        }}
-      >
-        Easy
-      </div>
-
-
-<div
-        style={{
-          position: "absolute",
-          left: "400px",
-          top: "340px",
-          color: "black",
-          fontSize: "44px",
-          fontWeight: "bold",
-        }}
-      >
-        Medium
-      </div>
-      
-<div
-        style={{
-          position: "absolute",
-          left: "450px",
-          top: "600px",
-          color: "black",
-          fontSize: "44px",
-          fontWeight: "bold",
-        }}
-      >
-        Hard
-      </div>
+ 
 
 
 <div className="spin" style={{

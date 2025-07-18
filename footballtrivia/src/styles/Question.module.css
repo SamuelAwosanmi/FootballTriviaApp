@@ -1,4 +1,4 @@
- .questionCard{
-  background-color: "yellow";
+.questionCard:hover{
+  background-color: #FBBF24;
   
 }

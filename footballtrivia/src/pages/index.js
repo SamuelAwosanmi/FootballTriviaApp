@@ -4,6 +4,10 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import ModeButton from "../../components/ToggleButton";
 import StartButton from '../../components/StartButton';
+import {useRef} from 'react';
+
+
+
 
 
 
@@ -14,24 +18,38 @@ import StartButton from '../../components/StartButton';
 
 
 export default function Home() {
-  useEffect(() =>{
-   // Variable
-    const audio = new Audio('/ChampionsLeagueAnthem.mp3')
+  // useEffect(() =>{
+  //  // Variable
+  //   const audio = new Audio('/ChampionsLeagueAnthem.mp3')
   
-    // The code I am running
-    audio.loop = true;
-    audio.play();
+  //   // The code I am running
+  //   audio.loop = true;
+  //   audio.play();
 
-    // Optional return function
-  return () => {
-    alert("Anthem audio is unable to be played right now.")
+  //   // Optional return function
+  // return () => {
+  //   alert("Anthem audio is unable to be played right now.")
+  // }
+  
+  //   }, []); // Dependency array
+  
+  
+  
+  const audioRef = useRef('null');
+
+const playAnthem = () => {
+  if (audioRef.current) {
+    audioRef.current.play();
   }
-  
-    }, []); // Dependency array
-  
-  
-  
-  
+};
+
+const pauseAnthem = () => {
+  if (audioRef.current) {
+    audioRef.current.pause();
+  }
+};
+
+<audio ref = {audioRef} src='/ChampionsLeagueAnthem.mp3'/>
   
   
   
