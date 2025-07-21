@@ -1,5 +1,5 @@
 ﻿# Football Trivia ⚽
-## FootballTriviaApp
+## Built using NextJs(React), CSS and hosted on Vercel.
  **FootballTriviaApp**
 
 
