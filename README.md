@@ -2,7 +2,7 @@
 ## FootballTriviaApp
  **FootballTriviaApp**
  ---
- [] demo
+ - [] demo
  [x] demo
 # FootballTriviaApp
 # FootballTriviaApp
