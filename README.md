@@ -1,4 +1,4 @@
-﻿# Football Trivia
+﻿# Football Trivia ⚽
 ## FootballTriviaApp
  **FootballTriviaApp**
 
