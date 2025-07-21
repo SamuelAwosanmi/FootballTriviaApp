@@ -34,31 +34,35 @@ export default function difficultySelector() {
         
 <div id="layout-container"
 style={{
-  height: '150vh',
-  width: '150vh',
+  height: '100vh',
+  width: '100vw',
 }}>
         <div className="difficultydiv" style={{
             display:'flex',
         alignContent: "center",
         justifyContent: 'center',
-        height: '200vh', 
+        height: '100vh', 
         
         }} 
                 
         >
-            <svg width='900' height='900'>
+            <svg width='100%' height='100%' viewBox="0 0 800 800">
 
                   <path d={getPath(0,120)}
                   
                 fill="red"
+                
 
-onClick={()=> saveLevel('hard') } /> 
+    
+onClick={()=> saveLevel('hard') } 
+
+
+/> 
 
 
                
                 
- 
-  <text x="250" y="650" fontSize="32" fill="black" fontWeight="bold">Easy</text>
+
 
                  <path d={getPath(120,240)} fill="green"
  onClick={()=> saveLevel('easy') } />
@@ -90,33 +94,40 @@ onClick={()=> saveLevel('hard') } />
 
 <div id="RandomButton">
 
-<button styles = {{
-    
-    
-}}
- onClick= {() => {
 
-  alert(" Spin incoming");
-
-
-        
-    }
-
-    }
-
->
-    Random
-</button>
 
 
 </div>
 
 
+<div id="Key"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          left: "45%",
+          display: "flex",
+          gap: "20px",
+          backgroundColor: "white",
+          padding: "10px 10px",
+          borderRadius: "8px",
+          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+        
+        }}>
 
+
+ 
+ 
+ 
+  <p className="hard" style={{ color: "red", margin: 0 }}>Hard</p>
+        <p className="medium" style={{ color: "yellow", margin: 0 }}>Medium</p>
+        <p className="easy" style={{ color: "green", margin: 0 }}>Easy</p>
+</div>
 
 
 
        </div>
+
+
        </div>
     );
 }

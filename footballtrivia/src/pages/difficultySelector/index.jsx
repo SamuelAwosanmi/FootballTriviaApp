@@ -17,8 +17,9 @@ export default function DifficultySelectorPage() {
   <div style={{
     backgroundColor: '#FFF7ED',
         color: '#1F2937',
-        height: '100vh',
-        width: '100vw',
+        height: '100%',
+        width: '100%',
+
   }}>
 <div id="Text">
     
@@ -28,8 +29,13 @@ export default function DifficultySelectorPage() {
      }}><strong>Select a difficulty option</strong></h1>
     </div>
     <DifficultySelector/>
+
+
     
-   </div>
+
+    </div>
+    
+   
  
 
 );

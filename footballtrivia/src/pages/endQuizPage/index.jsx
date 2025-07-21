@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import ToggleButton from "../../../components/ToggleButton";
+import football from "../../../components/football";
 export default function EndQuizPage({ score, total }) {
   return (
     <div
@@ -15,13 +16,17 @@ export default function EndQuizPage({ score, total }) {
         padding: "20px",
         textAlign: "center",
         gap: "20px",
+         backgroundImage: "url('stadium.jpg')",
+
       }}
     >
+
+      
       <h1 style={{ fontSize: "30px", fontWeight: "bold", color: "#10B981" }}>
         🎉 You have now completed the quizz 🎉
       </h1>
 
-      <p style={{ fontSize: "15px", maxWidth: "400px" }}>
+      <p style={{ fontSize: "15px", maxWidth: "400px", color: 'white', fontStyle: 'bold', }}>
         Thanks for playing! You can try again or tune into other difficulty levels.
       </p>
 
@@ -32,7 +37,7 @@ export default function EndQuizPage({ score, total }) {
               backgroundColor: "#EF4444",
               color: "white",
               padding: "10px 25px",
-              fontSize: "1rem",
+              fontSize: "15px",
               border: "none",
               borderRadius: "8px",
               cursor: "pointer",
@@ -58,6 +63,7 @@ export default function EndQuizPage({ score, total }) {
           </button>
         </Link>
       </div>
+      <ToggleButton/>
     </div>
   );
 }
